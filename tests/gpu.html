@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>SANGA GPU acceptance tests</title>
+    <style>
+      body {
+        background: #f6f6f1;
+        color: #405337;
+        font: 14px system-ui;
+        margin: 30px;
+      }
+      button {
+        padding: 12px 20px;
+        background: #405337;
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      pre {
+        white-space: pre-wrap;
+        font: 12px/1.8 monospace;
+      }
+      canvas {
+        width: 480px;
+        height: 320px;
+        border-radius: 8px;
+      }
+      a {
+        color: #405337;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GPU acceptance tests</h1>
+    <p>本番と同じWGSLパイプラインで収支・非負性・再現性・扇状地の形成を検証。</p>
+    <button id="run">実機検証を実行</button> <a href="/">アプリへ戻る</a>
+    <pre id="results">待機中</pre>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="./gpu.ts"></script>
+  </body>
+</html>
